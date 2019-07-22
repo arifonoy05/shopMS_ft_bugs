@@ -1,6 +1,7 @@
 <?php
-session_start();
-include_once('../model/dp.php');
+    session_start();
+    //include_once('../model/dp.php');       //shows error
+    include_once('../model/db.php');        
 
 if (isset($_REQUEST['submit'])) {
     $name = trim($_REQUEST['uname']);
@@ -29,5 +30,6 @@ if (isset($_REQUEST['submit'])) {
     }
 } else {
 
-    header('loaction: ../views/register.php');
+    header('location: ../views/register.php');
 }
+?>
